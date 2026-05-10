@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import agentVideo from "./agent_video.mp4";
+import realestateVideo from "./realestate_video.mp4";
+import sigungImg from "./sigung.png";
 
 const BLACK = "#111111";
 const DARK  = "#191F28";
@@ -9,7 +12,7 @@ const GRAY4 = "#6B7280";
 const WHITE = "#FFFFFF";
 const GREEN = "#16A34A";
 
-const IMG_SIGUNG      = "/src/sigung.png";
+const IMG_SIGUNG = sigungImg;
 
 const IMG_MAP = {
   sigung:      IMG_SIGUNG,
@@ -78,7 +81,7 @@ const PROJECTS = [
     result: "30가지 다양한 증상 시나리오로 검증을 완료했으며, 증상 입력부터 제품 구매 링크 제공까지 전 과정이 자동으로 작동하는 서비스를 완성했습니다.",
     impact: "공공 데이터 수집부터 AI 추천, 외부 API 연동까지 서비스 전 과정을 직접 설계하고 구현했습니다. 데이터를 실제 사용 가능한 서비스로 만드는 역량을 실증한 프로젝트입니다.",
     tags: ["Agent AI", "RAG", "공공 API", "LLM", "네이버 쇼핑 API"],
-    media: { type: "video", src: "/src/agent_video.mp4", startTime: 14, caption: "영양제 추천 Agent AI 서비스 데모" },
+    media: { type: "video", src: agentVideo, startTime: 14, caption: "영양제 추천 Agent AI 서비스 데모" },
   },
   {
     id: "p2", tag: "Personal Project",
@@ -91,7 +94,7 @@ const PROJECTS = [
     result: "복잡한 부동산 계산을 한 화면에서 실시간으로 확인할 수 있는 인터랙티브 서비스를 완성했습니다.",
     impact: "기획부터 개발, AI 연동까지 전 과정을 Claude와 바이브코딩으로 단독 수행했습니다. AI 툴을 활용해 복잡한 문제를 실제 작동하는 서비스로 빠르게 구현하는 역량을 보여주는 프로젝트입니다.",
     tags: ["AI 바이브코딩", "금융 모델링", "인터랙티브 UI"],
-    media: { type: "video", src: "/src/realestate_video.mp4", startTime: 0, caption: "한국 부동산 적정 매매가 시뮬레이터 데모" },
+    media: { type: "video", src: realestateVideo, startTime: 0, caption: "한국 부동산 적정 매매가 시뮬레이터 데모" },
   },
 ];
 
