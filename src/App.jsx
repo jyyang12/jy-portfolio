@@ -73,13 +73,13 @@ const PROJECTS = [
     id: "p1", tag: "AI Engineering",
     title: "개인 맞춤형 영양제 추천 서비스 개발",
     period: "2025 · AI MBA 팀프로젝트",
-    summary: "식약처 공공 API + LangChain + Qwen 2.5-7b RAG 파이프라인 End-to-End 구현. LoRA Fine-tuning으로 Loss 2.06 → 0.27 달성.",
-    problem: "건강기능식품 정보 비대칭 — 성분-증상 매핑 지식 없이 광고에 의존. 6조원+ 시장에도 개인화 추천 부재.",
-    data: "식약처 공공 API (C003) · 1,000개 단위 배치 수집 · 14개 컬럼 정제",
-    method: "LangChain + Ollama + Qwen 2.5-7b RAG 구조 → 네이버 쇼핑 API Tool 연동 → LoRA Fine-tuning (r=8, epoch=3)",
-    result: "30개 Q&A 시뮬레이션 검증 완료 · Loss 2.06 → 0.27 · PPL 19.05 → 1.32",
-    impact: "공공 데이터 수집·정제·서빙, RAG 기반 Agent AI 파이프라인 End-to-End 구축 경험.",
-    tags: ["RAG", "LangChain", "Qwen 2.5-7b", "LoRA Fine-tuning", "공공 API"],
+    summary: "식약처 공공 API 기반 건강기능식품 추천 Agent AI 서비스. 증상 입력 시 성분 추천부터 실제 구매 링크까지 연결되는 End-to-End 파이프라인 구현.",
+    problem: "건강기능식품 시장은 연간 6조원 규모지만, 소비자 대부분은 본인 증상에 맞는 성분이 뭔지 모른 채 광고에 의존해 구매합니다. 개인 상황에 맞는 추천 서비스가 없다는 문제를 해결하고자 프로젝트를 기획했습니다.",
+    data: "식품의약품안전처 공공 API에서 건강기능식품 데이터를 직접 수집하고, 성분과 증상을 연결하는 데이터셋을 구축했습니다.",
+    method: "사용자가 증상을 입력하면 공공 DB에서 관련 성분을 찾고, AI가 맞춤 추천 조합을 생성한 뒤, 네이버 쇼핑 API와 연동해 실제 구매 가능한 제품까지 자동으로 연결되는 서비스를 설계했습니다.",
+    result: "30가지 다양한 증상 시나리오로 검증을 완료했으며, 증상 입력부터 제품 구매 링크 제공까지 전 과정이 자동으로 작동하는 서비스를 완성했습니다.",
+    impact: "공공 데이터 수집부터 AI 추천, 외부 API 연동까지 서비스 전 과정을 직접 설계하고 구현했습니다. 데이터를 실제 사용 가능한 서비스로 만드는 역량을 실증한 프로젝트입니다.",
+    tags: ["Agent AI", "RAG", "공공 API", "LLM", "네이버 쇼핑 API"],
     media: { type: "video", label: "영양제 Agent AI 서비스 데모" },
   },
 
@@ -88,18 +88,18 @@ const PROJECTS = [
     title: "한국 부동산 적정 매매가 시뮬레이터",
     period: "2025 · 개인 프로젝트",
     summary: "Claude와 바이브코딩으로 직접 제작. 소득·자산·대출 조건 입력 시 Bear/Base/Bull 3가지 시나리오로 적정 매매가 분석.",
-    problem: "부동산 의사결정의 정보 비대칭 — DSR, LTV, 취득세, 보유세, 집값 시나리오를 한번에 계산할 수 있는 도구 부재.",
-    data: "사용자 입력값 (연봉, 자기자본, 지역, LTV, 대출 조건) + 지역별 실거래 기반 집값 시나리오",
-    method: "인터랙티브 UI → 원리금 균등/원금 균등/만기일시 상환 계산 → Bear/Base/Bull 시나리오 분석 → Claude AI API 연동",
-    result: "DSR·LTV·취득세·보유세·납부이자·순지분 전 항목 실시간 계산. 현재 AI 추천 없이 계산 기능 작동 → Claude API 키 연동 시 AI 추천 활성화.",
-    impact: "Claude 바이브코딩으로 기획·개발·AI 연동 전 과정 단독 수행.",
-    tags: ["Claude 바이브코딩", "Claude AI API", "금융 모델링", "인터랙티브 UI"],
+    problem: "부동산 구매를 고려할 때 대출 한도, 세금, 월 상환금, 향후 자산 변화까지 한눈에 계산할 수 있는 도구가 없어 의사결정이 어렵습니다. 이 불편함을 직접 해결하고자 시뮬레이터를 기획·제작했습니다.",
+    data: "연봉, 자기자본, 지역, 대출 조건 등 사용자가 직접 입력한 값을 기반으로 실거래 시세를 반영한 집값 시나리오를 적용합니다.",
+    method: "입력값에 따라 DSR, LTV, 취득세, 보유세, 월 상환금, 순자산 변화를 자동으로 계산하며, 집값이 하락·유지·상승하는 세 가지 시나리오(Bear/Base/Bull)별로 5년·10년 후 자산 변화를 비교해볼 수 있도록 설계했습니다.",
+    result: "복잡한 부동산 계산을 한 화면에서 실시간으로 확인할 수 있는 인터랙티브 서비스를 완성했습니다.",
+    impact: "기획부터 개발, AI 연동까지 전 과정을 Claude와 바이브코딩으로 단독 수행했습니다. AI 툴을 활용해 복잡한 문제를 실제 작동하는 서비스로 빠르게 구현하는 역량을 보여주는 프로젝트입니다.",
+    tags: ["AI 바이브코딩", "금융 모델링", "인터랙티브 UI", "직접 제작"],
     media: { type: "video", label: "부동산 적정 매매가 시뮬레이터 데모", videoSrc: "realestate" },
   },
 ];
 
-const VIDEO_AGENT = "/agent_video.mp4";
-const VIDEO_REALESTATE = "/realestate_video.mp4";
+const VIDEO_AGENT = new URL("./agent_video.mp4", import.meta.url).href;
+const VIDEO_REALESTATE = new URL("./realestate_video.mp4", import.meta.url).href;
 
 const IMG_MAP = {
   sigung: IMG_SIGUNG,
